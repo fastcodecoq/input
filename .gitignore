@@ -12,4 +12,5 @@
 *.log
 *.tar.tgz
 node-modules/
+assets/libs
 sftp-config.json 
