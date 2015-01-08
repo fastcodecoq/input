@@ -1,7 +1,7 @@
 #!/bin/sh
 
-read -p "Entorno de desarollo: " ENV
-read -p "Commit del push": COMMIT
+read -p "Entorno de desarollo (rama del repo): " ENV
+read -p "Commit del push:": COMMIT
 
 git pull origin $ENV
 git add -A
