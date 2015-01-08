@@ -1,11 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es-CO" ng-app='input'>
    <head>
 
-   <title>Soluntech - Proyecto en construcciÃ³n</title>
+   <title>{{title}}</title>
    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+   <link href="assets/css/animate.css" rel="stylesheet/css" >
 
    <style>
       body{
@@ -22,16 +24,22 @@
    <br />
    <br />
    <br />
-       <p style="text-align:center; color:#555" >
-       <img src="http://www.soluntech.com/_/rsrc/1412805517236/config/customLogo.gif" alt="">
-       <br />
-       <br />
-       Actualmente en Soluntech estamos desarrollando este proyecto. 
-       <br />
-<br />
-<br />
-       <a href="http://soluntech.com/contactos" style="color:rgb(39, 166, 244)">Contacte a Soluntech.</a>
-       </p>
+  
+    <section class="animated" ui-view></section>
+
+    <!-- libs -->
+    <script type="text/javascript" src="assets/libs/angular/angular.js"></script>
+    <script type="text/javascript" src="assets/libs/angular/angular-animate.min.js"></script>
+    <script type="text/javascript" src="assets/libs/ui-router/release/angular-ui-router.js"></script>
+
+    <!-- app scripts -->
+    <script type="text/javascript" src="assets/js/_config.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/config.js"></script>
+    <script type="text/javascript" src="assets/js/directives.js"></script>
+    <script type="text/javascript" src="assets/js/controllers.js"></script>
+    <script type="text/javascript" src="assets/js/factorys.js"></script>
+
 
    </body>
 </html>

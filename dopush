@@ -1,0 +1,9 @@
+#!/bin/sh
+
+read -p "Entorno de desarollo: " ENV
+read -p "Commit del push": COMMIT
+
+git pull origin $ENV
+git add -A
+git commit -m $COMMIT 
+git push origin $ENV
