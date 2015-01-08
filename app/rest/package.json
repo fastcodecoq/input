@@ -1,0 +1,32 @@
+{
+	"name" : "INPUT",
+    "version" : "0.0.1b",
+    "main" : "main.js",
+    "description" : "Input is a way to make easy the business data digitalization.",    
+    "repository": {
+	"type": "git",
+	"url": "https://github.com/jgomez2014/node-auth.git"
+     },
+	"dependencies" : {
+	   "restify" : "latest",	   
+	   "mongoose" : "latest",
+	   "forever" : "latest",
+	   "should" : "latest",	   	   
+	   "body-parser" : "latest",
+	   "bcrypt-nodejs" : "latest",
+	   "s3" : "latest",
+	   "socket.io" : "latest",
+	   "mongoose-timestamp" : "latest",
+	   "crypto" : "latest",
+	   "rand-token" : "latest",
+	   "mongoose-auto-increment" : "latest",
+	   "password-hash" : "latest"
+	},
+	"scripts" : {
+	"start" : "forever start main.js",
+	"restart" : "forever restart main.js",
+	"stop" : "forever stop main.js",
+	"test" : "node main.js",
+	"dev" : "forever main.js"
+    }
+}

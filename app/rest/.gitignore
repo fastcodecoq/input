@@ -1,0 +1,15 @@
+*.zip
+*.rar
+*.sql
+*.csv
+*.doc
+*.docx
+*.ppt
+*.xls
+*.xlsx
+*.pptx
+*.tgz
+*.tar.tgz
+*.log
+node_modules
+start.sh

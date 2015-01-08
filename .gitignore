@@ -1,0 +1,15 @@
+*.zip
+*.rar
+*.sql
+*.csv
+*.doc
+*.docx
+*.ppt
+*.xls
+*.xlsx
+*.pptx
+*.tgz
+*.log
+*.tar.tgz
+node-modules/
+sftp-config.json 
