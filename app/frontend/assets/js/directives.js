@@ -19,4 +19,70 @@ angular.module('input')
       }
     };
   }
-]);
+])
+.directive('ngGoogleLogin', function(){
+
+
+  function Ctrl($env, $do, $scope, $rootScope){
+
+       $scope.do = $do;
+     
+
+  }
+
+
+  function Link(scope, element, attrs){
+    //do something linking
+  }
+
+   return {
+       restrict : 'A',
+       scope : 
+       {
+         ngModel : '=',
+         ngKey : '@',
+         ngSecret : '@'
+       },
+       templateUrl : 'views/google.login.button.html',
+       controller : Ctrl, 
+       link : Link
+   }
+
+})
+.directive('ngSearchBox', function(){
+
+
+  function Ctrl($env, $do, $scope, $rootScope){
+
+       $scope.do = $do;
+       $scope.lang = $rootScope.lang; 
+
+
+       $scope.update = function(){
+
+            $rootScope.searcher = $scope.searcher;
+       }
+     
+
+  }
+
+
+  function Link(scope, element, attrs){
+    //do something linking
+  }
+
+   return {
+       restrict : 'A',
+       scope : 
+       {
+         ngModel : '=',
+         ngKey : '@',
+         ngSecret : '@'
+       },
+       templateUrl : 'views/search.html',
+       controller : Ctrl, 
+       link : Link
+   }
+
+})
+;

@@ -1,0 +1,34 @@
+ <section class='menu noSelect' ng-controller="loginCtrl">
+<!--  <br>
+ <br> -->
+     <div >
+          <div class="top-menu">
+            <p class="tlc">
+            <!-- <br> -->
+              <img src="assets/img/no_user.png" alt="" style="border-radius: 99em;">              
+                <p class="tlc">
+                <!-- <br> -->
+                <span style="text-transform:capitalize"><b>{{user.name}}</b></span>
+                </p>
+              </p>
+          <!-- <br> -->
+          </div>
+           <a href="#/forms">
+               <i class="fa fa-file-text-o"></i>
+               <span>Forms</span>
+          </a>
+
+          <a href="#/balance">
+               <i class="fa fa-credit-card"></i>
+               <span>Acount Balance</span>
+          </a>
+              <a href="#/about">
+               <i class="fa fa-binoculars"></i>
+               <span>About</span>
+          </a>
+          <a href="#" ng-click="doLogout()">
+               <i class="fa fa-power-off"></i>
+               <span>Logout</span>
+          </a>      
+     </div>
+</section>

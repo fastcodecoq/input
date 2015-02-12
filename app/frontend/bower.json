@@ -5,7 +5,8 @@
     "angular": "latest",    
     "jquery": "latest",
     "ui-router" : "latest",
-    "bootstrap" : "latest"
+    "bootstrap" : "latest",
+    "fastclick" : "latest"
   },
   "private": true
 }

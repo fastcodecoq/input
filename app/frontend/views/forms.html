@@ -1,0 +1,9 @@
+<div  ng-init="load()" class="col-lg-12">
+   <div ng-search-box></div>
+<br>
+   <div class="list-group">   
+    <a class="list-group-item" href="#/records/{{form.key}}" ng-repeat="form in forms | filter:searcher" ng-if="!form.name.toLowerCase().match('hidden')">         
+         	{{form.name}}         
+     </a>     
+    </div>
+</div>

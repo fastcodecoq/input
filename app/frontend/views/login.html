@@ -1,0 +1,26 @@
+<div class="login">
+	<div class="container-fluid">
+		<div class="form-group text-center">
+			<img src="assets/img/Input-Vertical-Logo-Dark-Bg.png" width=170 class="logo">
+		</div>
+		<br>
+		<br>
+		<form ng-submit="doLogin()">
+			<div class="form-group">
+				<input autofocus class="form-control" ng-model="email" ng-init="root@goinput.co" type="email"  placeholder="{{ lang.username }}">
+			</div>
+			<div class="form-group">
+				<input class="form-control" ng-model="password" type="password" placeholder="{{ lang.password}}">
+			</div>
+			<div class="form-group text-center">
+				<button class="btn btn-info btn-block">{{ lang.login }}</button>
+			</div>
+			<!-- <div class="form-group text-center">
+				<label>{{ lang.or }}</label>
+			</div>
+			<div class="form-group text-center">
+				<div ng-google-login></div>
+			</div> -->
+		</form>
+	</div>
+</div>

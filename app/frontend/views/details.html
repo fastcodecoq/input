@@ -1,0 +1,69 @@
+<div  class="wrapper" ng-init="loadRecord()" >
+<h3><b>{{form.name}}</b></h3>
+<br>
+<p>
+  <a class="btn btn-default" ng-click="back()"><i class="fa fa-chevron-left"></i> {{lang.back}}</a> 
+  </p>
+  <br>
+<form id="data"  ng-submit='doEdit()'>
+
+<div ng-repeat="field in form.fields">
+          
+          <div ng-if='field.type === "email" && !field.name.match("hidden")'>
+          <label>{{field.name}}</label><br>
+                  <input name='{{field.key}}' value='{{form.records[field.key]}}' ng-required='{{field.required}}' class="form-control" type="email" placeholder='{{field.name}}'>
+<br>
+
+          </div>
+
+          <div ng-if='field.type === "date_time" && !field.name.match("hidden")'>
+          <label>{{field.name}}</label><br>
+                  <input name='{{field.key}}' ng-required='{{field.required}}' class="form-control" type="date" placeholder='{{field.name}}'>
+<br>
+
+          </div>
+
+           <div ng-if='(field.type === "short_text" || field.type === "phone")  && !field.name.match("hidden")'>
+           <label>{{field.name}}</label><br>
+                  <input name='{{field.key}}' ng-required='{{field.required}}' class="form-control" type="text" placeholder='{{field.name}}'>
+<br>
+
+          </div>
+
+              <div ng-if='field.type === "number" && !field.name.match("hidden")'>
+              <label>{{field.name}}</label><br>
+                  <input name='{{field.key}}' ng-required='{{field.required}}' class="form-control" type="number" placeholder='{{field.name}}'>
+<br>
+
+              </div>
+
+              <div ng-if='field.type === "multiple_choice" && !field.name.match("hidden")'>
+              <label>{{field.name}}</label><br>
+                  <select name='{{field.key}}' ng-required='{{field.required}}' class="form-control" value='{{field.format.default}}'>
+
+                       <option ng-repeat='option in field.format.options'>{{option}}</option>                  </select>
+                       <br>
+              </div>
+
+                  <div ng-if='field.type === "connection" && !field.name.match("hidden")' >
+              <label>{{field.name}}</label><br>
+                  <select name='{{field.key}}' ng-required='{{field.required}}' class="form-control" value='{{field.format.default}}'  ng-init='loadRelationship(field.relationship.object+"")'>
+
+                      <option ng-repeat='option in relationship[field.relationship.object+""]' >{{option[map[field.relationship.object]]}}</option>                  </select>
+                       <br>
+              </div>
+
+               <div ng-if='field.type === "paragraph_text" && !field.name.match("hidden")'>
+               <label>{{field.name}}</label>
+               <br>
+                  <textarea name='{{field.key}}' ng-required='{{field.required}}' class="form-control" placeholder='{{field.name}}'></textarea>
+<br>
+
+              </div>
+</div>
+<br>
+ <button class="btn btn-info btn-block">Enviar</button>
+
+</form>
+
+</div>
